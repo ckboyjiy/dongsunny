@@ -1,6 +1,17 @@
-<h1>기능맵</h1>
-<nav>
-  <a routerLink="/login">로그인</a>
-</nav>
-<router-outlet></router-outlet>
+<mat-drawer-container>
+  <mat-drawer #drawer mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/login">로그인</a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div>
+    <mat-toolbar>
+      <span>
+        <button type="button" mat-button (click)="drawer.toggle()">Menu</button>
+      </span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
 
