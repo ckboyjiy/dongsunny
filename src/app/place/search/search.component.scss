@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  text-align: center;
+  //justify-content: center; //세로 중앙 정렬
+  align-items: stretch;
+}
+
+.place {
+  text-align: left;
+  p.title {
+    font-size: 120%;
+  }
+  p.address, p.category {
+    color: rgba(0,0,0,0.6);
+  }
+}

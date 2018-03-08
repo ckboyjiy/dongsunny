@@ -1,0 +1,15 @@
+<div>
+  <mat-form-field>
+    <input matInput #searchText placeholder="어디 가고 싶니?" (keyup)="enterText(searchText.value)">
+  </mat-form-field>
+</div>
+<div>
+  <mat-nav-list dense>
+    <mat-list-item *ngFor="let place of places" class="place" (click)="clickPlace(place, $event)">
+      <p class="title" [innerHTML]="place.title" matLine></p>
+      <p class="category" matLine>{{place.category}}</p>
+      <p class="address" matLine>{{place.address}}</p>
+    </mat-list-item>
+    <mat-list-item (click)="nextPlaces()" *ngIf="isAvailableNext()">더보기</mat-list-item>
+  </mat-nav-list>
+</div>
