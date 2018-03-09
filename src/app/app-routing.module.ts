@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes} from '@angular/router';
-import {SearchComponent} from './place/search/search.component';
+import {SearchComponent} from './place/naver/search/search.component';
 
 const routes: Routes = [
   { path: 'dest/search', component: SearchComponent }

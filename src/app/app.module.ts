@@ -14,8 +14,9 @@ import {MatIconModule} from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { SearchComponent } from './place/search/search.component';
-import { PlaceService } from './place/place.service';
+import { SearchComponent } from './place/naver/search/search.component';
+import { PlaceService } from './place/naver/place.service';
+import { PlaceDialogComponent } from './place/naver/place-dialog/place-dialog.component';
 
 const materialModules = [
   BrowserAnimationsModule,
@@ -32,7 +33,8 @@ const materialModules = [
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    PlaceDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,9 @@ const materialModules = [
   ],
   providers: [
     PlaceService
+  ],
+  entryComponents: [
+    PlaceDialogComponent
   ],
   bootstrap: [AppComponent]
 })
